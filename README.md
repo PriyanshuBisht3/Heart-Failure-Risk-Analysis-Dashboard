@@ -71,3 +71,5 @@ Here’s an example of the dashboard layout and visualizations:
 - Binary columns (Diabetes, Smoking, High Blood Pressure) are converted into readable categories (e.g., Yes/No, Smoker/Non-Smoker).  
 - Survival rate is calculated as: Survival Rate = (Total Patients - Deaths) / Total Patients
 - Data cleaning, transformation, and calculated fields are performed to support interactive filtering and accurate visualization.
+
+© 2026 Priyanshu Singh Bisht – For educational use only
