@@ -1,19 +1,22 @@
-# Clinical Data Analysis Dashboard
+# Heart Failure Risk Analysis Dashboard
 
 ## Project Overview
-This interactive dashboard provides a comprehensive analysis of clinical patient data to uncover key risk factors affecting health outcomes. Through dynamic visualizations and filters, users can explore trends, identify high-risk groups, and support data-driven decision-making.
+This interactive dashboard provides a comprehensive analysis of **heart failure patient data** to uncover key factors affecting mortality risk and heart health outcomes. Through dynamic visualizations and filters, users can explore trends, identify high-risk groups, and support data-driven clinical insights.
 
 ---
 
 ## Dataset Description
-The dataset typically includes patient demographic information, clinical measurements, medical history, and outcome indicators. Common features include:
+The dataset contains clinical records of patients with heart failure and includes demographic, behavioral, and clinical measurements. Common features include:
 
-- Age and gender  
-- Relevant biomarkers or lab test results  
-- Presence of chronic conditions or comorbidities  
-- Behavioral factors (e.g., smoking status)  
-- Follow-up or observation period  
-- Outcome events (e.g., survival, death)
+- **Age** and **Gender**  
+- **Ejection Fraction** – percentage of blood pumped from the heart  
+- **Serum Creatinine** – kidney function indicator  
+- **Creatinine Phosphokinase (CPK)** – enzyme level related to heart muscle damage  
+- **Platelets** – blood clotting information  
+- Presence of **Chronic Conditions** (e.g., Diabetes, High Blood Pressure)  
+- **Smoking Status**  
+- **Follow-up Time** (in days)  
+- **Death Event** – whether the patient died during the follow-up period  
 
 ---
 
@@ -22,37 +25,49 @@ Here’s an example of the dashboard layout and visualizations:
 
 ![Dashboard Preview](dashboard.png)
 
-> **Note:** Replace `images/dashboard.png` with the relative path to your actual dashboard image in the repository.
+> **Note:** Replace `dashboard.png` with the relative path to your actual dashboard image in the repository.
 
 ---
 
 ## Core Visualizations
 
 ### Key Performance Indicators (KPIs)
-- Summary metrics such as total patients, event counts, and calculated rates.
+- Total number of patients  
+- Total deaths  
+- Calculated survival rate (%)  
 
 ### Interactive Filters
-- Slicers for categorical variables to segment and drill down into the data.
+- Slicers for **Diabetes**, **Gender**, **High Blood Pressure**, and **Smoking Status** to segment patients and explore patterns.
 
-### Scatter Plots
-- Multi-dimensional visualization of key clinical variables with outcome-based coloring.
+### Scatter Plot
+- X-axis: **Serum Creatinine**  
+- Y-axis: **Ejection Fraction**  
+- Bubble size: **Platelets**  
+- Color-coded by **Death Event** (Died / Survived)  
+*Purpose:* Identify patient clusters at high risk of heart failure mortality.
 
-### Bar Charts and Histograms
-- Distribution and comparison of outcomes across demographics and clinical groups.
+### Bar Charts
+- Death counts by **Gender**  
+- Death counts by **Smoking Status**
 
-### Pie or Donut Charts
-- Overall distribution of outcome categories or key labels.
+### Histograms
+- Distribution of deaths by **Age**  
+- Distribution of deaths by **Ejection Fraction (%)**
+
+### Pie Chart
+- Overall survival rate distribution (Died vs Survived)
 
 ---
 
 ## Insights and Use Cases
-- Identification of demographic or clinical factors associated with higher risk.  
-- Exploration of variable relationships to uncover potential predictive markers.  
-- Support for clinical decision-making, patient stratification, and resource prioritization.
+- Older patients and those with elevated serum creatinine combined with low ejection fraction show higher mortality risk.  
+- Chronic conditions like diabetes or high blood pressure influence survival outcomes.  
+- Smoking and gender differences are associated with variations in mortality.  
+- Helps clinicians and researchers identify high-risk patient groups for closer monitoring or intervention.
 
 ---
 
 ## Data Preparation and Modeling
-- Transformation of raw clinical data into meaningful categories and calculated metrics.  
-- Use of calculated columns and measures to support interactive filtering and visualization.  
-- Data cleaning and validation to ensure accuracy and reliability.
+- Binary columns (Diabetes, Smoking, High Blood Pressure) are converted into readable categories (e.g., Yes/No, Smoker/Non-Smoker).  
+- Survival rate is calculated as: Survival Rate = (Total Patients - Deaths) / Total Patients
+- Data cleaning, transformation, and calculated fields are performed to support interactive filtering and accurate visualization.
