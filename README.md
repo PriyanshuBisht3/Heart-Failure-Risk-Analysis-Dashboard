@@ -20,7 +20,7 @@ The dataset typically includes patient demographic information, clinical measure
 ## Dashboard Screenshot
 Here’s an example of the dashboard layout and visualizations:
 
-![Dashboard Preview](images/dashboard.png)
+![Dashboard Preview](dashboard.png)
 
 > **Note:** Replace `images/dashboard.png` with the relative path to your actual dashboard image in the repository.
 
